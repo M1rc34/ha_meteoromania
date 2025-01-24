@@ -9,25 +9,28 @@ from homeassistant import config_entries
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
 
-from .const import DOMAIN, API_URL
+from .const import DOMAIN, API_URL_CURRENT
 
 _LOGGER = logging.getLogger(__name__)
 
+
 async def fetch_available_cities(hass: HomeAssistant) -> list[str]:
-    """Fetch the list of all available cities from the meteoromania API."""
+    """Fetch the list of all available cities from the current weather API."""
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(API_URL) as resp:
+            async with session.get(API_URL_CURRENT) as resp:
                 if resp.status != 200:
                     _LOGGER.warning("Failed to fetch city list, status: %s", resp.status)
                     return []
                 data = await resp.json()
-        return [item["@attributes"]["nume"] for item in data["tara"]["localitate"]]
+        
+        # Extract city names from the current weather API
+        return [feature["properties"]["nume"] for feature in data.get("features", [])]
     except asyncio.TimeoutError:
-        _LOGGER.warning("Timeout while fetching city list from meteoromania.")
+        _LOGGER.warning("Timeout while fetching city list from the current weather API.")
         return []
     except Exception as ex:
-        _LOGGER.warning("Error fetching city list from meteoromania: %s", ex)
+        _LOGGER.warning("Error fetching city list from the current weather API: %s", ex)
         return []
 
 
@@ -48,18 +51,18 @@ class MeteoroManiaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
             return self.async_create_entry(title=city, data={"city": city})
 
-        # If no user_input, present form
+        # Fetch available cities from the current weather API
         all_cities = await fetch_available_cities(self.hass)
         if not all_cities:
-            # fallback to manual text input if we cannot fetch anything
+            # Fallback to manual text input if we cannot fetch anything
             schema = vol.Schema({vol.Required("city"): str})
         else:
-            # let user select from the dropdown
+            # Let user select from the dropdown
             all_cities.sort()
             schema = vol.Schema({vol.Required("city"): vol.In(all_cities)})
 
         return self.async_show_form(
             step_id="user",
             data_schema=schema,
-            errors=errors
+            errors=errors,
         )

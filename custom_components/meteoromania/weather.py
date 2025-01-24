@@ -85,9 +85,10 @@ class MeteoroManiaWeather(WeatherEntity):
         self._pressure = float(current.get("presiunetext", "0").split()[0])
         self._wind_speed = float(current.get("vant", "0").split()[0])
 
-        # Update forecast
-        forecast_data = self._coordinator.forecast_data["prognoza"]
+        # Update forecast, if available
+        forecast_data = self._coordinator.forecast_data.get("prognoza", [])
         forecasts: list[Forecast] = []
+
         for day_data in forecast_data:
             attributes = day_data.get("@attributes", {})
             date = attributes.get("data")
@@ -108,7 +109,8 @@ class MeteoroManiaWeather(WeatherEntity):
                 }
             )
 
-        self._forecast = forecasts
+        self._forecast = forecasts if forecasts else None
+        _LOGGER.debug("Built forecast data: %s", self._forecast)
 
     def _update_weather_and_notify(self):
         """Update weather and notify listeners."""
