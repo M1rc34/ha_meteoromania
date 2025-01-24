@@ -60,7 +60,7 @@ class MeteoroManiaWeather(WeatherEntity):
         return self._condition
 
     @property
-    def forecast(self) -> list[Forecast] | None:
+    def async_forecast_daily(self) -> list[Forecast] | None:
         """Return the daily forecast array."""
         return self._forecast
 
