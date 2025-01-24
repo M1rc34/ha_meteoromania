@@ -29,8 +29,8 @@ async def async_setup_entry(
 ) -> None:
     """Set up the Meteoromania weather platform."""
     city = config_entry.data[CONF_CITY]
-    entities = [MeteoRomaniaWeatherEntity(city, day) for day in range(1, 6)]
-    async_add_entities(entities)
+    entity = MeteoRomaniaWeatherEntity(city)
+    async_add_entities([entity])
 
 class MeteoRomaniaWeatherEntity(WeatherEntity):
     """Representation of a Meteoromania Weather entity."""
