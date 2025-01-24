@@ -75,8 +75,7 @@ class MeteoroManiaWeather(WeatherEntity):
 
     @property
     def available(self) -> bool:
-        """Return if entity is available."""
-        return not self._coordinator.last_update_failed
+        return self._coordinator.last_update_success
 
     def update_from_latest_data(self):
         """Parse the data from the coordinator and update internal state."""
