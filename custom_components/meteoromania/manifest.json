@@ -1,6 +1,6 @@
 {
     "domain": "meteoromania",
-    "name": "MeteoroMania",
+    "name": "MeteoRomania",
     "version": "1.0.0",
     "config_flow": true,
     "documentation": "https://github.com/M1rc34/ha_meteoromania",
