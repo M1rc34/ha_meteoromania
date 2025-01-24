@@ -99,9 +99,11 @@ class MeteoroManiaWeather(WeatherEntity):
         self._condition = CONDITION_MAP.get(fenomen_simbol, "cloudy")
 
         forecasts: list[Forecast] = []
+        _LOGGER.debug("test")
         for day_data in prognoza:
             attributes = day_data.get("@attributes", {})
             date = attributes.get("data")
+            _LOGGER.debug("Date: %s", date)
             if not date:
                 continue
 
