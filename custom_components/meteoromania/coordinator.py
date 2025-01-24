@@ -76,5 +76,9 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
 
                 self.forecast_data = forecast_city
                 self.current_data = current_city
+
+                # Notify listeners of the updated data
+                self.async_set_updated_data({"forecast_data": forecast_city, "current_data": current_city})
+
             except Exception as err:
                 raise UpdateFailed(f"Unexpected error: {err}")

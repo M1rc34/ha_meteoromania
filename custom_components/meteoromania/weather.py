@@ -73,7 +73,10 @@ class MeteoroManiaWeather(WeatherEntity):
 
     async def async_added_to_hass(self):
         """When entity is added to hass."""
+        # Subscribe to coordinator updates
         self._unsub_coordinator_update = self._coordinator.async_add_listener(self._update_weather_and_notify)
+        # Force an immediate update to populate the entity on addition
+        self._update_weather_and_notify()
         await super().async_added_to_hass()
 
     async def async_will_remove_from_hass(self):
@@ -84,10 +87,9 @@ class MeteoroManiaWeather(WeatherEntity):
         await super().async_will_remove_from_hass()
 
     def _update_weather_and_notify(self):
-        """Update weather and notify listeners."""
+        """Update weather and notify Home Assistant."""
         self.update_from_latest_data()
-        self.async_write_ha_state()
-        self.async_update_listeners()
+        self.async_write_ha_state()  # Notify Home Assistant of the updated state
 
     async def async_forecast_daily(self) -> list[Forecast] | None:
         """Return the daily forecast."""
