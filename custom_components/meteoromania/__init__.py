@@ -61,14 +61,14 @@ class MeteoRomaniaDataUpdateCoordinator(DataUpdateCoordinator):
             name=DOMAIN,
             update_interval=SCAN_INTERVAL,
         )
-        self.location = location
+        self.location = location.upper()  # Ensure uppercase for matching
         self.session = async_get_clientsession(hass)
 
     async def _async_update_data(self):
         """Update data via library."""
         try:
             async with async_timeout.timeout(10):
-                url = f"https://www.meteoromania.ro/wp-json/meteoapi/v2/prognoza-localitate?localitate={self.location}"
+                url = "https://www.meteoromania.ro/wp-json/meteoapi/v2/prognoza-orase"
                 async with self.session.get(url) as response:
                     response.raise_for_status()
                     xml_text = await response.text()
@@ -85,21 +85,29 @@ class MeteoRomaniaDataUpdateCoordinator(DataUpdateCoordinator):
         """Process raw data into usable forecast."""
         forecasts = []
         try:
-            prognoza_list = data['Prognoza_AdmNatMeteorologie_Romania']['tara']['localitate']['prognoza']
+            # Find the specific location's forecast
+            for location in data['tara']['localitate']:
+                if location['@attributes']['nume'].upper() == self.location:
+                    prognoza_list = location['prognoza']
+                    
+                    # Ensure prognoza_list is a list
+                    if not isinstance(prognoza_list, list):
+                        prognoza_list = [prognoza_list]
+                    
+                    for prognoza in prognoza_list:
+                        forecasts.append({
+                            'datetime': prognoza['@attributes']['data'],
+                            'temperature': float(prognoza['temp_max']),
+                            'templow': float(prognoza['temp_min']),
+                            'condition': self._map_condition(prognoza['fenomen_descriere']),
+                        })
+                    
+                    return forecasts
             
-            # Ensure prognoza_list is a list
-            if not isinstance(prognoza_list, list):
-                prognoza_list = [prognoza_list]
-            
-            for prognoza in prognoza_list:
-                forecasts.append({
-                    'datetime': prognoza['data'],
-                    'temperature': float(prognoza['temp_max']),
-                    'templow': float(prognoza['temp_min']),
-                    'condition': self._map_condition(prognoza['fenomen_descriere']),
-                })
-            
-            return forecasts
+            # If location not found
+            _LOGGER.error(f"Location {self.location} not found in forecast data")
+            return []
+        
         except (KeyError, TypeError, ValueError) as err:
             _LOGGER.error(f"Error processing forecast data: {err}")
             return []
@@ -108,12 +116,15 @@ class MeteoRomaniaDataUpdateCoordinator(DataUpdateCoordinator):
         """Map Romanian weather descriptions to HA conditions."""
         condition_map = {
             'CER VARIABIL': 'partlycloudy',
+            'CER PARTIAL NOROS': 'partlycloudy',
             'CER MAI MULT NOROS': 'cloudy',
             'NOROS': 'cloudy',
             'PLOAIE SLABA': 'rainy',
             'PLOAIE': 'rainy',
             'NINSOARE': 'snowy',
             'CEAȚĂ': 'fog',
+            'CERATA': 'fog',
+            'CER TEMPORAR NOROS, CEATA': 'fog',
             'VÂNT': 'windy'
         }
         return condition_map.get(raw_condition.upper(), 'unknown')
