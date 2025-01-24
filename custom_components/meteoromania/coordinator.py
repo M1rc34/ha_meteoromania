@@ -24,7 +24,7 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
             update_interval=timedelta(minutes=30),
         )
 
-    # Normalize city names for comparison
+    @staticmethod
     def normalize_city_name(city_name: str) -> str:
         """Normalize city names to lowercase for consistent comparison."""
         return city_name.strip().lower()
