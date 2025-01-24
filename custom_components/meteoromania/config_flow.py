@@ -1,8 +1,9 @@
 """Config flow for Meteoromania integration."""
 from __future__ import annotations
 
-import requests
+import aiohttp
 import logging
+import xmltodict
 from typing import Any
 
 import voluptuous as vol
