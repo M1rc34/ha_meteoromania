@@ -1,104 +1,40 @@
-"""Config flow for Meteoromania integration."""
+"""Config flow for Meteoromania Weather integration."""
 from __future__ import annotations
 
-import logging
-from typing import Any
-
-import aiohttp
 import voluptuous as vol
-import xmltodict
-
-from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
+from homeassistant.config_entries import ConfigFlow
 from homeassistant.const import CONF_NAME
-from homeassistant.helpers import selector
-from homeassistant.exceptions import HomeAssistantError
+from homeassistant.data_entry_flow import FlowResult
 
-from .const import DOMAIN, CONF_LOCATION
-
-_LOGGER = logging.getLogger(__name__)
+from .const import DOMAIN, CITIES, CONF_CITY
 
 class MeteoRomaniaConfigFlow(ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for Meteoromania."""
+    """Handle a config flow for Meteoromania Weather."""
 
     VERSION = 1
 
-    async def _validate_location(self, location: str):
-        """Validate the location by fetching data from the API."""
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get("https://www.meteoromania.ro/wp-json/meteoapi/v2/prognoza-orase") as response:
-                    if response.status != 200:
-                        _LOGGER.error(f"API returned status code {response.status}")
-                        raise HomeAssistantError(f"API returned status code {response.status}")
-                    
-                    xml_text = await response.text()
-                    data = xmltodict.parse(xml_text)
-                    
-                    # Check if location exists (case-insensitive)
-                    location_exists = any(
-                        loc['@attributes']['nume'].upper() == location.upper() 
-                        for loc in data['tara']['localitate']
-                    )
-                    
-                    if not location_exists:
-                        _LOGGER.error(f"Location {location} not found in available locations")
-                        raise HomeAssistantError(f"Location {location} not found. Available locations: {', '.join(loc['@attributes']['nume'] for loc in data['tara']['localitate'])}")
-                    
-                    return True
-        except aiohttp.ClientError as err:
-            _LOGGER.error(f"Connection error: {err}")
-            raise HomeAssistantError("Cannot connect to Meteoromania API") from err
-        except xmltodict.ParsingInterrupted as err:
-            _LOGGER.error(f"XML parsing error: {err}")
-            raise HomeAssistantError("Error parsing XML response") from err
-        except Exception as err:
-            _LOGGER.error(f"Unexpected error: {err}")
-            raise HomeAssistantError("Unexpected error occurred") from err
-
-    async def async_step_user(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
+    async def async_step_user(self, user_input=None):
         """Handle the initial step."""
-        errors: dict[str, str] = {}
-        
+        errors = {}
+
         if user_input is not None:
-            try:
-                # Validate location
-                location = user_input[CONF_LOCATION]
-                await self._validate_location(location)
-                
+            # Validate the input
+            if user_input[CONF_CITY] in CITIES:
                 return self.async_create_entry(
-                    title=f"Meteoromania - {location}",
+                    title=f"Meteoromania Weather - {user_input[CONF_CITY]}",
                     data={
-                        CONF_LOCATION: location,
-                        CONF_NAME: f"Meteoromania {location}"
+                        CONF_CITY: user_input[CONF_CITY],
                     }
                 )
-            except HomeAssistantError as err:
-                errors['base'] = 'cannot_connect'
-                _LOGGER.error(f"Configuration error: {err}")
-        
-        # Fetch available locations for potential user guidance
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get("https://www.meteoromania.ro/wp-json/meteoapi/v2/prognoza-orase") as response:
-                    if response.status == 200:
-                        xml_text = await response.text()
-                        data = xmltodict.parse(xml_text)
-                        available_locations = [loc['@attributes']['nome'] for loc in data['tara']['localitate']]
-                        _LOGGER.info(f"Available locations: {available_locations}")
-                    else:
-                        available_locations = ["IASI", "BUCURESTI", "CLUJ-NAPOCA"]  # Fallback list
-        except Exception:
-            available_locations = ["IASI", "BUCURESTI", "CLUJ-NAPOCA"]  # Fallback list
-        
-        # Create form
+            else:
+                errors["base"] = "invalid_city"
+
+        data_schema = vol.Schema({
+            vol.Required(CONF_CITY): vol.In(CITIES)
+        })
+
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema({
-                vol.Required(CONF_LOCATION, default="IASI"): str
-            }),
+            data_schema=data_schema,
             errors=errors
         )
-
-    async def async_step_import(self, config: dict[str, Any]) -> ConfigFlowResult:
-        """Import a config entry."""
-        return await self.async_step_user(config)
