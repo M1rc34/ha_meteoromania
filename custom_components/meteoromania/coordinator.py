@@ -1,61 +1,61 @@
-"""Coordinator to fetch data from meteoromania.ro API."""
-
-import asyncio
 import logging
 import aiohttp
-
 from datetime import timedelta
 
-from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .const import API_URL
+from .const import API_URL_FORECAST, API_URL_CURRENT, DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
 class MeteoroManiaCoordinator(DataUpdateCoordinator):
-    """Class to manage fetching data from MeteoroMania API."""
+    """Class to manage fetching data from the MeteoroMania API."""
 
-    def __init__(self, hass: HomeAssistant, city: str) -> None:
-        """Initialize."""
-        self.hass = hass
+    def __init__(self, hass, city):
+        """Initialize the coordinator."""
         self.city = city
+        self.forecast_data = None
+        self.current_data = None
 
-        # We'll refresh every 6 hours by default
         super().__init__(
             hass,
             _LOGGER,
-            name="MeteoroManiaCoordinator",
-            update_interval=timedelta(hours=6),
+            name=DOMAIN,
+            update_interval=timedelta(minutes=30),
         )
 
     async def _async_update_data(self):
-        """Fetch data from the meteoromania API and return the relevant city's data."""
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(API_URL) as response:
+        """Fetch data from the MeteoroMania API."""
+        async with aiohttp.ClientSession() as session:
+            try:
+                # Fetch forecast data
+                async with session.get(API_URL_FORECAST) as response:
                     if response.status != 200:
-                        raise UpdateFailed(f"API error: {response.status}")
-                    data = await response.json()
+                        raise UpdateFailed(f"Error fetching forecast: {response.status}")
+                    forecast_data = await response.json()
+                
+                # Fetch current weather data
+                async with session.get(API_URL_CURRENT) as response:
+                    if response.status != 200:
+                        raise UpdateFailed(f"Error fetching current weather: {response.status}")
+                    current_data = await response.json()
 
-            # The structure is data["tara"]["localitate"] -> list of city entries
-            # Each city entry: { "@attributes": {"nume": "Arad"}, "DataPrognozei": ..., "prognoza": [...] }
-            # We must filter for the city name matching self.city
-            # city attribute is data["@attributes"]["nume"]
-            all_cities = data["tara"]["localitate"]
-            result = None
-            for city_data in all_cities:
-                if city_data["@attributes"]["nume"].lower() == self.city.lower():
-                    result = city_data
-                    break
+                # Find relevant data for the city
+                forecast_city = next(
+                    (city for city in forecast_data["tara"]["localitate"] if city["@attributes"]["nume"].lower() == self.city.lower()), 
+                    None
+                )
+                current_city = next(
+                    (feature for feature in current_data["features"] if feature["properties"]["nume"].lower() == self.city.lower()),
+                    None
+                )
 
-            if result is None:
-                # We did not find the city in the response
-                raise UpdateFailed(f"City {self.city} not found in API data.")
+                if not forecast_city:
+                    raise UpdateFailed(f"City {self.city} not found in forecast data")
+                if not current_city:
+                    raise UpdateFailed(f"City {self.city} not found in current weather data")
 
-            return result
-
-        except asyncio.TimeoutError as err:
-            raise UpdateFailed("Timeout fetching meteoromania data") from err
-        except Exception as err:
-            raise UpdateFailed(f"Unexpected error: {err}") from err
+                self.forecast_data = forecast_city
+                self.current_data = current_city
+            except Exception as err:
+                raise UpdateFailed(f"Unexpected error: {err}")

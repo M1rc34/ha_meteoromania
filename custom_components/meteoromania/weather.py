@@ -41,66 +41,54 @@ class MeteoroManiaWeather(WeatherEntity):
         self._attr_unique_id = f"meteoromania_{city.lower()}"
         self._condition = None
         self._temperature = None
+        self._humidity = None
+        self._pressure = None
+        self._wind_speed = None
         self._forecast: List[Forecast] = []
 
     @property
-    def should_poll(self) -> bool:
-        """Disable polling because we use the coordinator."""
-        return False
-
-    @property
     def native_temperature(self):
-        """Return the temperature for the 'current' day (approx)."""
+        """Return the current temperature."""
         return self._temperature
 
     @property
     def condition(self):
-        """Return the weather condition."""
+        """Return the current weather condition."""
         return self._condition
+
+    @property
+    def humidity(self):
+        """Return the current humidity."""
+        return self._humidity
+
+    @property
+    def native_pressure(self):
+        """Return the current air pressure."""
+        return self._pressure
+
+    @property
+    def native_wind_speed(self):
+        """Return the current wind speed."""
+        return self._wind_speed
 
     async def async_forecast_daily(self) -> list[Forecast] | None:
         """Return the daily forecast."""
         return self._forecast
 
-    async def async_added_to_hass(self):
-        """When entity is added to hass."""
-        self._unsub_coordinator_update = self._coordinator.async_add_listener(self._update_weather_and_notify)
-        await super().async_added_to_hass()
-
-    async def async_will_remove_from_hass(self):
-        """When entity is about to be removed."""
-        if self._unsub_coordinator_update:
-            self._unsub_coordinator_update()
-            self._unsub_coordinator_update = None
-        await super().async_will_remove_from_hass()
-
-    @property
-    def available(self) -> bool:
-        return self._coordinator.last_update_success
-
-    def _update_weather_and_notify(self):
-        """Update weather and notify listeners."""
-        self.update_from_latest_data()
-        self.async_update_listeners()  # Notify listeners when forecast updates
-
     def update_from_latest_data(self):
         """Parse the data from the coordinator and update internal state."""
-        data = self._coordinator.data
-        prognoza = data.get("prognoza", [])
-        if not prognoza:
-            return
+        # Update current weather
+        current = self._coordinator.current_data["properties"]
+        self._temperature = float(current.get("tempe", 0))
+        self._condition = CONDITION_MAP.get(current.get("icon", ""), "cloudy")
+        self._humidity = current.get("umezeala", None)
+        self._pressure = float(current.get("presiunetext", "0").split()[0])
+        self._wind_speed = float(current.get("vant", "0").split()[0])
 
-        today = prognoza[0]
-        t_min = float(today.get("temp_min", 0))
-        t_max = float(today.get("temp_max", 0))
-        temp = (t_min + t_max) / 2.0
-        self._temperature = round(temp, 1)
-
-        fenomen_simbol = today.get("fenomen_simbol", "")
-        self._condition = CONDITION_MAP.get(fenomen_simbol, "cloudy")
-
+        # Update forecast
+        forecast_data = self._coordinator.forecast_data["prognoza"]
         forecasts: list[Forecast] = []
-        for day_data in prognoza:
+        for day_data in forecast_data:
             attributes = day_data.get("@attributes", {})
             date = attributes.get("data")
             if not date:
@@ -113,29 +101,16 @@ class MeteoroManiaWeather(WeatherEntity):
 
             forecasts.append(
                 {
-                    "datetime": f"{date}T00:00:00",  # Ensure RFC 3339 format
+                    "datetime": f"{date}T00:00:00",
                     "condition": cond,
-                    "native_temperature": temp_max,   # Daily high
-                    "native_templow": temp_min,      # Daily low
+                    "native_temperature": temp_max,
+                    "native_templow": temp_min,
                 }
             )
 
         self._forecast = forecasts
-        _LOGGER.debug("Built forecast data: %s", self._forecast)
 
-    async def async_update(self):
-        """Request coordinator refresh."""
-        await self._coordinator.async_request_refresh()
-
-    def async_write_ha_state(self):
-        """Called when coordinator data is updated."""
+    def _update_weather_and_notify(self):
+        """Update weather and notify listeners."""
         self.update_from_latest_data()
-        super().async_write_ha_state()
-
-    @property
-    def extra_state_attributes(self):
-        """Extra attributes."""
-        data = self._coordinator.data
-        return {
-            "DataPrognozei": data.get("DataPrognozei"),
-        }
+        self.async_update_listeners()
