@@ -80,7 +80,7 @@ class MeteoroManiaWeather(WeatherEntity):
         # Update current weather
         if self._coordinator.current_data:
             current = self._coordinator.current_data["properties"]
-            _LOGGER.debug("Updating current weather: %s", current)
+            _LOGGER.debug("Updating current weather with data: %s", current)
 
             self._temperature = float(current.get("tempe", 0))
             self._condition = CONDITION_MAP.get(current.get("icon", ""), "cloudy")
@@ -119,11 +119,21 @@ class MeteoroManiaWeather(WeatherEntity):
                     }
                 )
 
-            _LOGGER.debug("Updating forecast: %s", forecasts)
+            _LOGGER.debug("Updating forecast with data: %s", forecasts)
             self._forecast = forecasts
         else:
             _LOGGER.warning("No forecast data available to update entity")
             self._forecast = None
+
+        _LOGGER.debug(
+            "Entity updated: temperature=%s, condition=%s, humidity=%s, pressure=%s, wind_speed=%s, forecast=%s",
+            self._temperature,
+            self._condition,
+            self._humidity,
+            self._pressure,
+            self._wind_speed,
+            self._forecast,
+        )
 
     def _update_weather_and_notify(self):
         """Update weather and notify listeners."""
