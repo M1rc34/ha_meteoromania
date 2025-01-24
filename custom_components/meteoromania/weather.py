@@ -9,7 +9,6 @@ from homeassistant.components.weather import (
     WeatherEntityFeature,
     Forecast,
 )
-# Use UnitOfTemperature, not TEMP_CELSIUS
 from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
 
@@ -59,20 +58,17 @@ class MeteoroManiaWeather(WeatherEntity):
         """Return the weather condition."""
         return self._condition
 
-    @property
-    def async_forecast_daily(self) -> list[Forecast] | None:
-        """Return the daily forecast array."""
+    async def async_forecast_daily(self) -> list[Forecast] | None:
+        """Return the daily forecast."""
         return self._forecast
 
     async def async_added_to_hass(self):
         """When entity is added to hass."""
-        # Store the function that unsubscribes the listener
-        self._unsub_coordinator_update = self._coordinator.async_add_listener(self.async_write_ha_state)
+        self._unsub_coordinator_update = self._coordinator.async_add_listener(self._update_weather_and_notify)
         await super().async_added_to_hass()
 
     async def async_will_remove_from_hass(self):
         """When entity is about to be removed."""
-        # Call the unsub function if it's set
         if self._unsub_coordinator_update:
             self._unsub_coordinator_update()
             self._unsub_coordinator_update = None
@@ -81,6 +77,11 @@ class MeteoroManiaWeather(WeatherEntity):
     @property
     def available(self) -> bool:
         return self._coordinator.last_update_success
+
+    def _update_weather_and_notify(self):
+        """Update weather and notify listeners."""
+        self.update_from_latest_data()
+        self.async_update_listeners()  # Notify listeners when forecast updates
 
     def update_from_latest_data(self):
         """Parse the data from the coordinator and update internal state."""
@@ -99,11 +100,9 @@ class MeteoroManiaWeather(WeatherEntity):
         self._condition = CONDITION_MAP.get(fenomen_simbol, "cloudy")
 
         forecasts: list[Forecast] = []
-        _LOGGER.debug("test")
         for day_data in prognoza:
             attributes = day_data.get("@attributes", {})
             date = attributes.get("data")
-            _LOGGER.debug("Date: %s", date)
             if not date:
                 continue
 
@@ -114,10 +113,10 @@ class MeteoroManiaWeather(WeatherEntity):
 
             forecasts.append(
                 {
-                    "datetime": date,
+                    "datetime": f"{date}T00:00:00",  # Ensure RFC 3339 format
                     "condition": cond,
-                    "temperature": temp_max,   # daily high
-                    "templow": temp_min,       # daily low
+                    "native_temperature": temp_max,   # Daily high
+                    "native_templow": temp_min,      # Daily low
                 }
             )
 
