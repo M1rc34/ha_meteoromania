@@ -14,6 +14,7 @@ from homeassistant.components.weather import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers.entity import EntityDescription
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType
 from homeassistant.util import dt as dt_util
@@ -29,25 +30,22 @@ async def async_setup_entry(
 ) -> None:
     """Set up the Meteoromania weather platform."""
     city = config_entry.data[CONF_CITY]
-    async_add_entities([MeteoRomaniaWeatherEntity(city, day) for day in range(5)])
+    async_add_entities([MeteoRomaniaWeatherEntity(city, i, EntityDescription(f"Day {i+1}")) for i in range(5)])
 
 class MeteoRomaniaWeatherEntity(WeatherEntity):
     """Representation of a Meteoromania Weather entity."""
 
-    _attr_has_entity_name = True
-    _attr_supported_features = WeatherEntityFeature.FORECAST_DAILY
-    _attr_attribution = "Data from Meteoromania.ro"
-
-    def __init__(self, city: str, day: int) -> None:
+    def __init__(self, city: str, day: int, description: EntityDescription) -> None:
         """Initialize the weather entity."""
         self._city = city
         self._day = day
+        self._description = description
         self._weather_data = None
 
     @property
     def name(self) -> str:
         """Return the name of the entity."""
-        return f"{self._city} Weather - Day {self._day + 1}"
+        return f"{self._city} - {self._description.name}"
 
     @property
     def unique_id(self) -> str:
