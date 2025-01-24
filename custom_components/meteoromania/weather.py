@@ -29,7 +29,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up the Meteoromania weather platform."""
     city = config_entry.data[CONF_CITY]
-    async_add_entities([MeteoRomaniaWeatherEntity(city)])
+    async_add_entities([MeteoRomaniaWeatherEntity(city, day) for day in range(5)])
 
 class MeteoRomaniaWeatherEntity(WeatherEntity):
     """Representation of a Meteoromania Weather entity."""
@@ -38,20 +38,21 @@ class MeteoRomaniaWeatherEntity(WeatherEntity):
     _attr_supported_features = WeatherEntityFeature.FORECAST_DAILY
     _attr_attribution = "Data from Meteoromania.ro"
 
-    def __init__(self, city: str) -> None:
+    def __init__(self, city: str, day: int) -> None:
         """Initialize the weather entity."""
         self._city = city
+        self._day = day
         self._weather_data = None
 
     @property
     def name(self) -> str:
         """Return the name of the entity."""
-        return f"{self._city} Weather"
+        return f"{self._city} Weather - Day {self._day + 1}"
 
     @property
     def unique_id(self) -> str:
         """Return a unique identifier for this weather entity."""
-        return f"{DOMAIN}_{self._city}"
+        return f"{DOMAIN}_{self._city}_{self._day}"
 
     async def async_update(self) -> None:
         """Update weather data."""
@@ -64,7 +65,7 @@ class MeteoRomaniaWeatherEntity(WeatherEntity):
                         # Find city's forecast
                         for location in data.get('tara', {}).get('localitate', []):
                             if location['@attributes']['nume'] == self._city:
-                                self._weather_data = location
+                                self._weather_data = location['prognoza'][self._day]
                                 break
         except Exception as err:
             _LOGGER.error(f"Error fetching weather data: {err}")
@@ -85,10 +86,7 @@ class MeteoRomaniaWeatherEntity(WeatherEntity):
             'PLOAIE SLABA': 'rainy'
         }
         
-        return condition_map.get(
-            self._weather_data['prognoza'][0]['fenomen_descriere'], 
-            'unknown'
-        )
+        return condition_map.get(self._weather_data['fenomen_descriere'], 'unknown')
 
     @property
     def temperature(self) -> float | None:
@@ -97,8 +95,19 @@ class MeteoRomaniaWeatherEntity(WeatherEntity):
             return None
         
         try:
-            return float(self._weather_data['prognoza'][0]['temp_max'])
-        except (TypeError, IndexError):
+            return float(self._weather_data['temp_max'])
+        except (TypeError, ValueError):
+            return None
+
+    @property
+    def temperature_low(self) -> float | None:
+        """Return the minimum temperature."""
+        if not self._weather_data:
+            return None
+        
+        try:
+            return float(self._weather_data['temp_min'])
+        except (TypeError, ValueError):
             return None
 
     @property
@@ -106,25 +115,18 @@ class MeteoRomaniaWeatherEntity(WeatherEntity):
         """Return the temperature unit."""
         return "°C"
 
-    def get_forecast(self, forecast_type: str) -> list[Forecast] | None:
-        """Return a forecast of temperature and condition."""
-        if not self._weather_data or forecast_type != 'daily':
+    @property
+    def forecast(self) -> list[Forecast] | None:
+        """Return the forecast."""
+        if not self._weather_data:
             return None
 
-        forecasts = []
-        for forecast in self._weather_data['prognoza']:
-            try:
-                date_str = forecast['@attributes']['data']
-                forecasts.append({
-                    'datetime': date_str,
-                    'temperature': float(forecast['temp_max']),
-                    'templow': float(forecast['temp_min']),
-                    'condition': self._map_condition(forecast['fenomen_descriere'])
-                })
-            except (KeyError, TypeError):
-                continue
-
-        return forecasts
+        return [{
+            'datetime': dt_util.parse_datetime(self._weather_data['@attributes']['data']).isoformat(),
+            'temperature': float(self._weather_data['temp_max']),
+            'templow': float(self._weather_data['temp_min']),
+            'condition': self._map_condition(self._weather_data['fenomen_descriere'])
+        }]
 
     def _map_condition(self, description: str) -> str:
         """Map Meteoromania description to Home Assistant condition."""
