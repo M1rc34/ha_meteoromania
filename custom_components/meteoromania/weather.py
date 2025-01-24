@@ -38,6 +38,7 @@ class MeteoroManiaWeather(WeatherEntity):
         self._coordinator = coordinator
         self._city = city
         self._attr_name = city
+        self._unsub_coordinator_update = None
         self._attr_unique_id = f"meteoromania_{city.lower()}"
         self._condition = None
         self._temperature = None
@@ -65,12 +66,16 @@ class MeteoroManiaWeather(WeatherEntity):
 
     async def async_added_to_hass(self):
         """When entity is added to hass."""
-        self._coordinator.async_add_listener(self.async_write_ha_state)
+        # Store the function that unsubscribes the listener
+        self._unsub_coordinator_update = self._coordinator.async_add_listener(self.async_write_ha_state)
         await super().async_added_to_hass()
 
     async def async_will_remove_from_hass(self):
         """When entity is about to be removed."""
-        self._coordinator.async_remove_listener(self.async_write_ha_state)
+        # Call the unsub function if it's set
+        if self._unsub_coordinator_update:
+            self._unsub_coordinator_update()
+            self._unsub_coordinator_update = None
         await super().async_will_remove_from_hass()
 
     @property
