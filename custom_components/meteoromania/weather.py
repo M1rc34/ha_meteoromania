@@ -120,6 +120,7 @@ class MeteoroManiaWeather(WeatherEntity):
             )
 
         self._forecast = forecasts
+        _LOGGER.debug("Built forecast data: %s", self._forecast)
 
     async def async_update(self):
         """Request coordinator refresh."""
