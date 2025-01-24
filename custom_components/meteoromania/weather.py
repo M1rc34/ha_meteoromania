@@ -71,6 +71,24 @@ class MeteoroManiaWeather(WeatherEntity):
         """Return the current wind speed."""
         return self._wind_speed
 
+    async def async_added_to_hass(self):
+        """When entity is added to hass."""
+        self._unsub_coordinator_update = self._coordinator.async_add_listener(self._update_weather_and_notify)
+        await super().async_added_to_hass()
+
+    async def async_will_remove_from_hass(self):
+        """When entity is removed from hass."""
+        if self._unsub_coordinator_update:
+            self._unsub_coordinator_update()
+            self._unsub_coordinator_update = None
+        await super().async_will_remove_from_hass()
+
+    def _update_weather_and_notify(self):
+        """Update weather and notify listeners."""
+        self.update_from_latest_data()
+        self.async_write_ha_state()
+        self.async_update_listeners()
+
     async def async_forecast_daily(self) -> list[Forecast] | None:
         """Return the daily forecast."""
         return self._forecast
@@ -134,8 +152,3 @@ class MeteoroManiaWeather(WeatherEntity):
             self._wind_speed,
             self._forecast,
         )
-
-    def _update_weather_and_notify(self):
-        """Update weather and notify listeners."""
-        self.update_from_latest_data()
-        self.async_update_listeners()
