@@ -9,7 +9,8 @@ from homeassistant.components.weather import (
     WeatherEntityFeature,
     Forecast,
 )
-from homeassistant.const import TEMP_CELSIUS
+# Instead of TEMP_CELSIUS, we import UnitOfTemperature:
+from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
 
 from .const import DOMAIN, CONDITION_MAP
@@ -30,14 +31,13 @@ class MeteoroManiaWeather(WeatherEntity):
     _attr_has_entity_name = True
     _attr_attribution = "Data provided by meteoromania.ro"
     _attr_supported_features = WeatherEntityFeature.FORECAST_DAILY
-    _attr_native_temperature_unit = TEMP_CELSIUS
+    # Use UnitOfTemperature instead of TEMP_CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
 
     def __init__(self, coordinator: MeteoroManiaCoordinator, city: str):
         """Initialize the entity."""
         self._coordinator = coordinator
         self._city = city
-        # This name will show in the frontend. 
-        # If you want it to be city-specific, something like f"Weather {city}"
         self._attr_name = city
         self._attr_unique_id = f"meteoromania_{city.lower()}"
         self._condition = None
@@ -82,39 +82,19 @@ class MeteoroManiaWeather(WeatherEntity):
     def update_from_latest_data(self):
         """Parse the data from the coordinator and update internal state."""
         data = self._coordinator.data
-        # `data` is the dictionary for a single city:
-        # {
-        #   "@attributes": {"nume": "Bucuresti"},
-        #   "DataPrognozei": "2025-01-24",
-        #   "prognoza": [
-        #       {
-        #         "@attributes": { "data":"2025-01-25"},
-        #         "temp_min":"4",
-        #         "temp_max":"11",
-        #         "fenomen_descriere":"CER VARIABIL",
-        #         "fenomen_simbol":"001",
-        #         ...
-        #       }, ...
-        #    ]
-        # }
         prognoza = data.get("prognoza", [])
         if not prognoza:
             return
 
-        # We'll treat the first item in `prognoza` as "today" (i.e. current).
         today = prognoza[0]
-        # Some integrators average min and max or pick max as "current" temperature.
-        # We'll choose to do a midpoint for example:
         t_min = float(today.get("temp_min", 0))
         t_max = float(today.get("temp_max", 0))
         temp = (t_min + t_max) / 2.0
         self._temperature = round(temp, 1)
 
         fenomen_simbol = today.get("fenomen_simbol", "")
-        # Map phenomenon symbol to an internal condition
         self._condition = CONDITION_MAP.get(fenomen_simbol, "cloudy")
 
-        # Build the forecast for all days (including day 1)
         forecasts: list[Forecast] = []
         for day_data in prognoza:
             attributes = day_data.get("@attributes", {})
@@ -131,8 +111,8 @@ class MeteoroManiaWeather(WeatherEntity):
                 {
                     "datetime": date,
                     "condition": cond,
-                    "temperature": temp_max,       # daily high
-                    "templow": temp_min,           # daily low
+                    "temperature": temp_max,   # daily high
+                    "templow": temp_min,       # daily low
                 }
             )
 
