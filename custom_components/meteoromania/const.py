@@ -1,14 +1,18 @@
-"""Constants for the Meteoromania Weather integration."""
+"""Constants for the MeteoroMania integration."""
 
 DOMAIN = "meteoromania"
-NAME = "Meteoromania"
+
+PLATFORMS = ["weather"]
+
 API_URL = "https://meteoromania.ro/wp-json/meteoapi/v2/prognoza-orase"
 
-# Configuration keys
-CONF_CITY = "city"
-
-# List of available Romanian cities
-CITIES = [
-    "Arad", "Botosani", "Bucuresti", "Cluj-Napoca", "Constanta", 
-    "Craiova", "Iasi", "Rm. Valcea", "Sibiu", "Sulina"
-]
+# Example condition mapping.
+# You will likely want to improve or expand this to match real phenomena codes from
+# 'fenomen_simbol' or 'fenomen_descriere' to Home Assistant's recognized weather conditions.
+CONDITION_MAP = {
+    "001": "sunny",           # CER VARIABIL
+    "001-2": "partlycloudy",  # CER PARTIAL NOROS
+    "008": "fog",             # CEATA
+    "202-2": "rainy",         # PLOAIE SLABA
+    # Add more as needed
+}

@@ -1,141 +1,156 @@
-"""Weather platform for Meteoromania Weather integration."""
+"""Weather platform for the MeteoroMania integration."""
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timedelta
-
-import aiohttp
-import async_timeout
+from typing import List
 
 from homeassistant.components.weather import (
     WeatherEntity,
     WeatherEntityFeature,
     Forecast,
 )
-from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import TEMP_CELSIUS
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import ConfigType
-from homeassistant.util import dt as dt_util
 
-from .const import DOMAIN, API_URL, CONF_CITY
+from .const import DOMAIN, CONDITION_MAP
+from .coordinator import MeteoroManiaCoordinator
 
 _LOGGER = logging.getLogger(__name__)
 
-async def async_setup_entry(
-    hass: HomeAssistant,
-    config_entry: ConfigEntry,
-    async_add_entities: AddEntitiesCallback,
-) -> None:
-    """Set up the Meteoromania weather platform."""
-    city = config_entry.data[CONF_CITY]
-    entity = MeteoRomaniaWeatherEntity(city)
-    async_add_entities([entity])
 
-class MeteoRomaniaWeatherEntity(WeatherEntity):
-    """Representation of a Meteoromania Weather entity."""
+async def async_setup_entry(hass: HomeAssistant, entry, async_add_entities):
+    """Set up the MeteoroMania weather entity."""
+    coordinator: MeteoroManiaCoordinator = hass.data[DOMAIN][entry.entry_id]
+    async_add_entities([MeteoroManiaWeather(coordinator, entry.data["city"])])
+
+
+class MeteoroManiaWeather(WeatherEntity):
+    """Representation of the weather entity for a chosen city."""
 
     _attr_has_entity_name = True
+    _attr_attribution = "Data provided by meteoromania.ro"
     _attr_supported_features = WeatherEntityFeature.FORECAST_DAILY
-    _attr_attribution = "Data from Meteoromania.ro"
+    _attr_native_temperature_unit = TEMP_CELSIUS
 
-    def __init__(self, city: str, day: int) -> None:
-        """Initialize the weather entity."""
+    def __init__(self, coordinator: MeteoroManiaCoordinator, city: str):
+        """Initialize the entity."""
+        self._coordinator = coordinator
         self._city = city
-        self._day = day
-        self._weather_data = None
+        # This name will show in the frontend. 
+        # If you want it to be city-specific, something like f"Weather {city}"
+        self._attr_name = city
+        self._attr_unique_id = f"meteoromania_{city.lower()}"
+        self._condition = None
+        self._temperature = None
+        self._forecast: List[Forecast] = []
 
     @property
-    def name(self) -> str:
-        """Return the name of the entity."""
-        return f"{self._city} Weather - Day {self._day}"
+    def should_poll(self) -> bool:
+        """Disable polling because we use the coordinator."""
+        return False
 
     @property
-    def unique_id(self) -> str:
-        """Return a unique identifier for this weather entity."""
-        return f"{DOMAIN}_{self._city}_{self._day}"
-
-    async def async_update(self) -> None:
-        """Update weather data."""
-        try:
-            async with async_timeout.timeout(10):
-                async with aiohttp.ClientSession() as session:
-                    async with session.get(API_URL) as response:
-                        data = await response.json()
-                        
-                        # Find city's forecast
-                        for location in data.get('tara', {}).get('localitate', []):
-                            if location['@attributes']['nume'] == self._city:
-                                self._weather_data = location['prognoza'][self._day - 1]
-                                break
-        except Exception as err:
-            _LOGGER.error(f"Error fetching weather data: {err}")
-            self._weather_data = None
+    def native_temperature(self):
+        """Return the temperature for the 'current' day (approx)."""
+        return self._temperature
 
     @property
-    def condition(self) -> str | None:
-        """Return the current condition."""
-        if not self._weather_data:
-            return None
-        
-        # Map Romanian weather descriptions to Home Assistant conditions
-        condition_map = {
-            'CER TEMPORAR NOROS': 'cloudy',
-            'CER PARTIAL NOROS': 'partlycloudy',
-            'CER VARIABIL': 'partlycloudy',
-            'CER MAI MULT NOROS': 'cloudy',
-            'PLOAIE SLABA': 'rainy'
-        }
-        
-        return condition_map.get(self._weather_data['fenomen_descriere'], 'unknown')
-
-    @property
-    def temperature(self) -> float | None:
-        """Return the current temperature."""
-        if not self._weather_data:
-            return None
-        
-        try:
-            return float(self._weather_data['temp_max'])
-        except (TypeError, ValueError):
-            return None
-
-    @property
-    def temperature_low(self) -> float | None:
-        """Return the minimum temperature."""
-        if not self._weather_data:
-            return None
-        
-        try:
-            return float(self._weather_data['temp_min'])
-        except (TypeError, ValueError):
-            return None
-
-    @property
-    def temperature_unit(self) -> str:
-        """Return the temperature unit."""
-        return "°C"
+    def condition(self):
+        """Return the weather condition."""
+        return self._condition
 
     @property
     def forecast(self) -> list[Forecast] | None:
-        """Return the forecast."""
-        if not self._weather_data:
-            return None
+        """Return the daily forecast array."""
+        return self._forecast
 
-        return [{
-            'datetime': dt_util.parse_datetime(self._weather_data['@attributes']['data']).isoformat(),
-            'temperature': float(self._weather_data['temp_max']),
-            'templow': float(self._weather_data['temp_min']),
-            'condition': self._map_condition(self._weather_data['fenomen_descriere'])
-        }]
+    async def async_added_to_hass(self):
+        """When entity is added to hass."""
+        self._coordinator.async_add_listener(self.async_write_ha_state)
+        await super().async_added_to_hass()
 
-    def _map_condition(self, description: str) -> str:
-        """Map Meteoromania description to Home Assistant condition."""
-        condition_map = {
-            'CER TEMPORAR NOROS': 'cloudy',
-            'CER PARTIAL NOROS': 'partlycloudy',
-            'CER VARIABIL': 'partlycloudy',
-            'CER MAI MULT NOROS': 'cloudy',
-            'PLOAIE SLABA': 'rainy'
+    async def async_will_remove_from_hass(self):
+        """When entity is about to be removed."""
+        self._coordinator.async_remove_listener(self.async_write_ha_state)
+        await super().async_will_remove_from_hass()
+
+    @property
+    def available(self) -> bool:
+        """Return if entity is available."""
+        return not self._coordinator.last_update_failed
+
+    def update_from_latest_data(self):
+        """Parse the data from the coordinator and update internal state."""
+        data = self._coordinator.data
+        # `data` is the dictionary for a single city:
+        # {
+        #   "@attributes": {"nume": "Bucuresti"},
+        #   "DataPrognozei": "2025-01-24",
+        #   "prognoza": [
+        #       {
+        #         "@attributes": { "data":"2025-01-25"},
+        #         "temp_min":"4",
+        #         "temp_max":"11",
+        #         "fenomen_descriere":"CER VARIABIL",
+        #         "fenomen_simbol":"001",
+        #         ...
+        #       }, ...
+        #    ]
+        # }
+        prognoza = data.get("prognoza", [])
+        if not prognoza:
+            return
+
+        # We'll treat the first item in `prognoza` as "today" (i.e. current).
+        today = prognoza[0]
+        # Some integrators average min and max or pick max as "current" temperature.
+        # We'll choose to do a midpoint for example:
+        t_min = float(today.get("temp_min", 0))
+        t_max = float(today.get("temp_max", 0))
+        temp = (t_min + t_max) / 2.0
+        self._temperature = round(temp, 1)
+
+        fenomen_simbol = today.get("fenomen_simbol", "")
+        # Map phenomenon symbol to an internal condition
+        self._condition = CONDITION_MAP.get(fenomen_simbol, "cloudy")
+
+        # Build the forecast for all days (including day 1)
+        forecasts: list[Forecast] = []
+        for day_data in prognoza:
+            attributes = day_data.get("@attributes", {})
+            date = attributes.get("data")
+            if not date:
+                continue
+
+            temp_min = float(day_data.get("temp_min", 0))
+            temp_max = float(day_data.get("temp_max", 0))
+            fenomen_code = day_data.get("fenomen_simbol", "")
+            cond = CONDITION_MAP.get(fenomen_code, "cloudy")
+
+            forecasts.append(
+                {
+                    "datetime": date,
+                    "condition": cond,
+                    "temperature": temp_max,       # daily high
+                    "templow": temp_min,           # daily low
+                }
+            )
+
+        self._forecast = forecasts
+
+    async def async_update(self):
+        """Update the entity by asking the coordinator for new data."""
+        await self._coordinator.async_request_refresh()
+
+    def async_write_ha_state(self):
+        """Call when coordinator data is updated."""
+        self.update_from_latest_data()
+        super().async_write_ha_state()
+
+    @property
+    def extra_state_attributes(self):
+        """Add any additional attributes you want."""
+        data = self._coordinator.data
+        return {
+            "DataPrognozei": data.get("DataPrognozei"),
         }
-        return condition_map.get(description, 'unknown')
