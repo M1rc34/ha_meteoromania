@@ -80,6 +80,8 @@ class MeteoroManiaWeather(WeatherEntity):
         # Update current weather
         if self._coordinator.current_data:
             current = self._coordinator.current_data["properties"]
+            _LOGGER.debug("Updating current weather: %s", current)
+
             self._temperature = float(current.get("tempe", 0))
             self._condition = CONDITION_MAP.get(current.get("icon", ""), "cloudy")
             self._humidity = current.get("umezeala", None)
@@ -117,6 +119,7 @@ class MeteoroManiaWeather(WeatherEntity):
                     }
                 )
 
+            _LOGGER.debug("Updating forecast: %s", forecasts)
             self._forecast = forecasts
         else:
             _LOGGER.warning("No forecast data available to update entity")

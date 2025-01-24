@@ -38,14 +38,16 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
                     if response.status != 200:
                         raise UpdateFailed(f"Error fetching forecast: {response.status}")
                     forecast_data = await response.json()
+                    _LOGGER.debug("Forecast data: %s", forecast_data)
 
                 # Fetch current weather data
                 async with session.get(API_URL_CURRENT) as response:
                     if response.status != 200:
                         raise UpdateFailed(f"Error fetching current weather: {response.status}")
                     current_data = await response.json()
+                    _LOGGER.debug("Current weather data: %s", current_data)
 
-                # Find relevant data for the city
+                # Match the city
                 normalized_city = self.normalize_city_name(self.city)
                 forecast_city = next(
                     (
@@ -63,6 +65,9 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
                     ),
                     None,
                 )
+
+                _LOGGER.debug("Matched forecast city: %s", forecast_city)
+                _LOGGER.debug("Matched current city: %s", current_city)
 
                 if not forecast_city:
                     _LOGGER.warning(f"No forecast data available for city: {self.city}")
