@@ -19,7 +19,7 @@ from .const import DOMAIN, CONF_LOCATION
 
 _LOGGER = logging.getLogger(__name__)
 
-PLATFORMS: list[str] = ["weather"]
+PLATFORMS: list[str] = ["sensor", "weather"]
 SCAN_INTERVAL = timedelta(hours=1)
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
