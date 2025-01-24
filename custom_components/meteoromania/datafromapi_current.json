@@ -1,0 +1,3922 @@
+{
+  "success": true,
+  "type": "FeatureCollection",
+  "date": "2025-01-24T17:00:00+02:00",
+  "features": [
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3113115.070000",
+          "5479112.020000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 62,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "996.4 mb, in scadere",
+        "icon": "84",
+        "nume": "ADAMCLISI",
+        "tempe": "11.4",
+        "vant": "1.0 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3024592.430000",
+          "5797145.790000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1002.6 mb, in scadere",
+        "icon": "11",
+        "nume": "ADJUD",
+        "tempe": "6.4",
+        "vant": "1.5 m/s, directia : SSE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2623065.200000",
+          "5790595.750000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "987.7 mb, in crestere",
+        "icon": "84",
+        "nume": "ALBA IULIA",
+        "tempe": "6.3",
+        "vant": "1.8 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2822263.320000",
+          "5462026.350000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 63,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1006.8 mb, in scadere",
+        "icon": "5",
+        "nume": "ALEXANDRIA",
+        "tempe": "12.4",
+        "vant": "2.9 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2377075.030000",
+          "5801770.390000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 82,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1005.6 mb, variabila",
+        "icon": "3",
+        "nume": "ARAD",
+        "tempe": "7.1",
+        "vant": "2.4 m/s, directia : VSV",
+        "tempapa": "indisponibil",
+        "offset": [15, -11]
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2995885.310000",
+          "5865998.500000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 82,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "994.3 mb, in scadere",
+        "icon": "11",
+        "nume": "BACAU",
+        "tempe": "6.6",
+        "vant": "0.7 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2572934.470000",
+          "5539430.790000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "979.1 mb, in scadere",
+        "icon": "84",
+        "nume": "BACLES",
+        "tempe": "7.8",
+        "vant": "4.3 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2615074.270000",
+          "6050614.270000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 97,
+        "fenomen_e": "burnita",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "995.7 mb, variabila",
+        "icon": "17",
+        "nume": "BAIA MARE",
+        "tempe": "4.1",
+        "vant": "2.5 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2495386.900000",
+          "5602811.500000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 75,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "993.9 mb, in scadere",
+        "icon": "3",
+        "nume": "BAILE HERCULANE",
+        "tempe": "9.2",
+        "vant": "1.2 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2597218.790000",
+          "5469972.940000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1010.1 mb, in crestere",
+        "icon": "18",
+        "nume": "BAILESTI",
+        "tempe": "8.9",
+        "vant": "2.6 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2594882.850000",
+          "5866576.400000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "indisponibil",
+        "zapada": "14 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "861.5 mb, variabila",
+        "icon": "84",
+        "nume": "BAISOARA",
+        "tempe": "0.0",
+        "vant": "1.7 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2740099.930000",
+          "5717103.350000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "aversa ninsoare",
+        "zapada": "61 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "788.9 mb, variabila",
+        "icon": "42",
+        "nume": "BALEA LAC",
+        "tempe": "-2.0",
+        "vant": "3.9 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2352893.750000",
+          "5681972.460000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1010.2 mb, in crestere",
+        "icon": "11",
+        "nume": "BANLOC",
+        "tempe": "6.7",
+        "vant": "2.3 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2849314.900000",
+          "5793300.620000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 92,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "955.7 mb, variabila",
+        "icon": "48",
+        "nume": "BARAOLT",
+        "tempe": "3.3",
+        "vant": "1.3 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3077362.660000",
+          "5817772.410000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 87,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "994.9 mb, in scadere",
+        "icon": "11",
+        "nume": "BARLAD",
+        "tempe": "5.2",
+        "vant": "2.7 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3066675.970000",
+          "5942035.140000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "968.9 mb, variabila",
+        "icon": "11",
+        "nume": "BARNOVA (RADAR)",
+        "tempe": "3.0",
+        "vant": "0.6 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2743509.370000",
+          "5923511.480000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "963.5 mb, variabila",
+        "icon": "18",
+        "nume": "BATOS",
+        "tempe": "3.7",
+        "vant": "2.8 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2665452.940000",
+          "5432959.350000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 89,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1012.8 mb, variabila",
+        "icon": "18",
+        "nume": "BECHET",
+        "tempe": "9.3",
+        "vant": "2.0 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2973379.130000",
+          "5708351.210000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 69,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "915.5 mb, in scadere",
+        "icon": "5",
+        "nume": "BISOCA",
+        "tempe": "7.0",
+        "vant": "2.8 m/s, directia : SSE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2728880.140000",
+          "5966442.870000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "972.6 mb, variabila",
+        "icon": "18",
+        "nume": "BISTRITA",
+        "tempe": "3.4",
+        "vant": "1.0 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2664451.020000",
+          "5808988.840000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "976.4 mb, in crestere",
+        "icon": "84",
+        "nume": "BLAJ",
+        "tempe": "5.6",
+        "vant": "5.0 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2701895.790000",
+          "5724908.760000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "955.4 mb, variabila",
+        "icon": "18",
+        "nume": "BOITA",
+        "tempe": "4.4",
+        "vant": "1.3 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2514732.480000",
+          "5941036.150000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 82,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "978.5 mb, variabila",
+        "icon": "84",
+        "nume": "BOROD",
+        "tempe": "4.7",
+        "vant": "4.1 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2978166.780000",
+          "6062985.530000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 93,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "997.3 mb, variabila",
+        "icon": "11",
+        "nume": "BOTOSANI",
+        "tempe": "2.9",
+        "vant": "0.9 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2449717.210000",
+          "5608669.910000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 92,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "988.4 mb, stationara",
+        "icon": "11",
+        "nume": "BOZOVICI",
+        "tempe": "6.9",
+        "vant": "1.2 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3108003.580000",
+          "5654104.240000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 75,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1013.6 mb, in scadere",
+        "icon": "3",
+        "nume": "BRAILA",
+        "tempe": "10.2",
+        "vant": "0.9 m/s, directia : ENE",
+        "tempapa": "indisponibil",
+        "offset": [10, -8]
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2841559.570000",
+          "5731741.680000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 93,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "952.7 mb, variabila",
+        "icon": "48",
+        "nume": "BRASOV GHIMBAV",
+        "tempe": "4.1",
+        "vant": "0.7 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2815993.330000",
+          "5884967.610000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": "indisponibil",
+        "fenomen_e": "indisponibil",
+        "zapada": "45 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": " mb, ",
+        "icon": "84",
+        "nume": "BUCIN",
+        "tempe": "indisponibil",
+        "vant": "indisponibil",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2917992.250000",
+          "5543161.920000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 63,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1004.7 mb, in scadere",
+        "icon": "3",
+        "nume": "BUCURESTI AFUMATI",
+        "tempe": "13.0",
+        "vant": "2.3 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2903008.030000",
+          "5544775.340000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 66,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1003.7 mb, in scadere",
+        "icon": "3",
+        "nume": "BUCURESTI BANEASA",
+        "tempe": "12.5",
+        "vant": "2.6 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2904748.880000",
+          "5529432.680000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 65,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1004.8 mb, in scadere",
+        "icon": "3",
+        "nume": "BUCURESTI FILARET",
+        "tempe": "12.5",
+        "vant": "1.8 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2989117.950000",
+          "5642429.790000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 60,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1003.4 mb, in scadere",
+        "icon": "3",
+        "nume": "BUZAU",
+        "tempe": "12.0",
+        "vant": "2.4 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2554341.910000",
+          "5463106.490000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 93,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1010.3 mb, in crestere",
+        "icon": "5",
+        "nume": "CALAFAT",
+        "tempe": "8.6",
+        "vant": "1.4 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3043282.780000",
+          "5497335.780000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 49,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1013.0 mb, in scadere",
+        "icon": "3",
+        "nume": "CALARASI",
+        "tempe": "14.4",
+        "vant": "0.7 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2810390.880000",
+          "5958068.990000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "ninsoare",
+        "zapada": "60 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "791.2 mb, variabila",
+        "icon": "42",
+        "nume": "CALIMANI (RETITIS)",
+        "tempe": "-3.9",
+        "vant": "indisponibil",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2564841.600000",
+          "5838839.910000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 86,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "944.8 mb, variabila",
+        "icon": "5",
+        "nume": "CAMPENI (BISTRA)",
+        "tempe": "4.1",
+        "vant": "2.0 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2864629.410000",
+          "5644172.400000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 70,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "959.5 mb, variabila",
+        "icon": "18",
+        "nume": "CAMPINA",
+        "tempe": "9.9",
+        "vant": "1.0 m/s, directia : SSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2787059.510000",
+          "5664880.410000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "935.0 mb, variabila",
+        "icon": "18",
+        "nume": "CAMPULUNG MUSCEL",
+        "tempe": "5.9",
+        "vant": "0.7 m/s, directia : SSE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2711441.390000",
+          "5480949.630000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1003.7 mb, variabila",
+        "icon": "18",
+        "nume": "CARACAL",
+        "tempe": "9.3",
+        "vant": "3.0 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2474218.200000",
+          "5687426.170000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "990.3 mb, variabila",
+        "icon": "11",
+        "nume": "CARANSEBES",
+        "tempe": "6.3",
+        "vant": "1.8 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2888732.050000",
+          "5938401.260000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "ninsoare",
+        "zapada": "66 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "803.6 mb, in scadere",
+        "icon": "42",
+        "nume": "CEAHLAU TOACA",
+        "tempe": "-1.8",
+        "vant": "3.1 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3121807.410000",
+          "5519086.780000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 68,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1004.7 mb, in scadere",
+        "icon": "84",
+        "nume": "CERNAVODA",
+        "tempe": "10.8",
+        "vant": "1.3 m/s, directia : SSE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2398007.430000",
+          "5863834.630000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1007.9 mb, variabila",
+        "icon": "3",
+        "nume": "CHISINEU CRIS",
+        "tempe": "7.1",
+        "vant": "3.2 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2623945.190000",
+          "5905873.750000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 93,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "967.9 mb, variabila",
+        "icon": "3",
+        "nume": "CLUJ-NAPOCA",
+        "tempe": "4.4",
+        "vant": "1.1 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3188805.110000",
+          "5498589.710000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1014.2 mb, in scadere",
+        "icon": "3",
+        "nume": "CONSTANTA",
+        "tempe": "8.6",
+        "vant": "0.6 m/s, directia : E",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3155018.050000",
+          "5579793.510000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 86,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "989.1 mb, in scadere",
+        "icon": "84",
+        "nume": "CORUGEA",
+        "tempe": "8.6",
+        "vant": "2.3 m/s, directia : SE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2997345.490000",
+          "6000755.200000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "980.8 mb, variabila",
+        "icon": "11",
+        "nume": "COTNARI",
+        "tempe": "2.4",
+        "vant": "4.7 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2656859.130000",
+          "5513563.560000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 95,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "992.9 mb, variabila",
+        "icon": "18",
+        "nume": "CRAIOVA",
+        "tempe": "9.2",
+        "vant": "3.8 m/s, directia : SSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2504854.170000",
+          "5668950.320000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 65,
+        "fenomen_e": "indisponibil",
+        "zapada": "19 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "851.7 mb, variabila",
+        "icon": "84",
+        "nume": "CUNTU",
+        "tempe": "-0.3",
+        "vant": "4.0 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2746221.400000",
+          "5649711.860000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "961.5 mb, stationara",
+        "icon": "18",
+        "nume": "CURTEA DE ARGES",
+        "tempe": "6.8",
+        "vant": "0.4 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2958144.040000",
+          "6139337.090000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "985.0 mb, variabila",
+        "icon": "18",
+        "nume": "DARABANI",
+        "tempe": "1.6",
+        "vant": "3.4 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2735134.650000",
+          "5624088.920000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "950.2 mb, in scadere",
+        "icon": "18",
+        "nume": "DEDULESTI-MORARESTI",
+        "tempe": "6.7",
+        "vant": "1.5 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2660408.010000",
+          "5962988.640000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "989.1 mb, variabila",
+        "icon": "84",
+        "nume": "DEJ",
+        "tempe": "4.1",
+        "vant": "1.8 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2549083.090000",
+          "5758728.490000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "989.8 mb, variabila",
+        "icon": "3",
+        "nume": "DEVA",
+        "tempe": "6.1",
+        "vant": "4.4 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2698069.630000",
+          "5569004.560000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "982.2 mb, in scadere",
+        "icon": "84",
+        "nume": "DRAGASANI",
+        "tempe": "9.2",
+        "vant": "2.5 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2518722.440000",
+          "5562905.800000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 72,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1007.9 mb, variabila",
+        "icon": "3",
+        "nume": "DROBETA TURNU SEVERIN",
+        "tempe": "11.2",
+        "vant": "2.4 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2737524.450000",
+          "5816939.600000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 97,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "978.4 mb, variabila",
+        "icon": "18",
+        "nume": "DUMBRAVENI",
+        "tempe": "5.6",
+        "vant": "2.2 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2467984.440000",
+          "5889320.350000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ceata",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "948.8 mb, variabila",
+        "icon": "29",
+        "nume": "DUMBRAVITA DE CODRU",
+        "tempe": "2.0",
+        "vant": "1.1 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2775778.200000",
+          "5754146.260000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "965.8 mb, in crestere",
+        "icon": "18",
+        "nume": "FAGARAS",
+        "tempe": "4.3",
+        "vant": "2.8 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3099020.070000",
+          "5526231.040000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 71,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1008.3 mb, variabila",
+        "icon": "84",
+        "nume": "FETESTI",
+        "tempe": "9.9",
+        "vant": "1.3 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3027863.370000",
+          "5730413.600000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1009.4 mb, in scadere",
+        "icon": "11",
+        "nume": "FOCSANI",
+        "tempe": "5.2",
+        "vant": "0.5 m/s, directia : ENE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2813212.720000",
+          "5689704.360000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 98,
+        "fenomen_e": "aversa lapovita",
+        "zapada": "20 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "859.4 mb, in scadere",
+        "icon": "39",
+        "nume": "FUNDATA",
+        "tempe": "0.9",
+        "vant": "1.2 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3120537.620000",
+          "5696280.990000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1007.2 mb, in scadere",
+        "icon": "11",
+        "nume": "GALATI",
+        "tempe": "4.6",
+        "vant": "1.2 m/s, directia : E",
+        "tempapa": "indisponibil",
+        "offset": [-48, 0]
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2886816.580000",
+          "5446144.450000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 65,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1012.6 mb, in scadere",
+        "icon": "3",
+        "nume": "GIURGIU",
+        "tempe": "13.0",
+        "vant": "2.6 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3250360.220000",
+          "5650392.370000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 95,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1015.7 mb, in scadere",
+        "icon": "11",
+        "nume": "GORGOVA",
+        "tempe": "6.9",
+        "vant": "1.0 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3038417.210000",
+          "5580805.120000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 66,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1009.4 mb, in scadere",
+        "icon": "3",
+        "nume": "GRIVITA",
+        "tempe": "11.4",
+        "vant": "1.4 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3228147.900000",
+          "5572823.120000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1015.9 mb, in scadere",
+        "icon": "11",
+        "nume": "GURA PORTITEI",
+        "tempe": "6.6",
+        "vant": "1.4 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2486132.320000",
+          "5825202.150000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 87,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "998.0 mb, variabila",
+        "icon": "84",
+        "nume": "GURAHONT",
+        "tempe": "6.2",
+        "vant": "1.3 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3112882.450000",
+          "5573114.410000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 73,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1010.7 mb, in scadere",
+        "icon": "84",
+        "nume": "HARSOVA",
+        "tempe": "9.4",
+        "vant": "1.2 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2461526.180000",
+          "5907631.850000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "999.9 mb, variabila",
+        "icon": "5",
+        "nume": "HOLOD",
+        "tempe": "4.9",
+        "vant": "2.6 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2563971.010000",
+          "5918812.880000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 84,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "950.7 mb, variabila",
+        "icon": "84",
+        "nume": "HUEDIN",
+        "tempe": "4.3",
+        "vant": "0.5 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3075566.380000",
+          "5970022.070000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 92,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1007.5 mb, stationara",
+        "icon": "11",
+        "nume": "IASI",
+        "tempe": "4.2",
+        "vant": "1.6 m/s, directia : E",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2743915.440000",
+          "6040988.360000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 97,
+        "fenomen_e": "ninsoare",
+        "zapada": "45 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "815.2 mb, variabila",
+        "icon": "42",
+        "nume": "IEZER",
+        "tempe": "-3.3",
+        "vant": "1.6 m/s, directia : ENE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2900624.260000",
+          "5727347.000000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 95,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "934.3 mb, variabila",
+        "icon": "11",
+        "nume": "INTORSURA BUZAULUI",
+        "tempe": "4.1",
+        "vant": "1.3 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2304577.010000",
+          "5745299.270000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 81,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1010.3 mb, variabila",
+        "icon": "84",
+        "nume": "JIMBOLIA",
+        "tempe": "7.9",
+        "vant": "4.1 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2840044.790000",
+          "5894172.450000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 98,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "927.4 mb, variabila",
+        "icon": "18",
+        "nume": "JOSENI",
+        "tempe": "1.3",
+        "vant": "1.6 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3214503.640000",
+          "5584768.090000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1011.4 mb, in scadere",
+        "icon": "11",
+        "nume": "JURILOVCA",
+        "tempe": "6.3",
+        "vant": "1.1 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2936110.590000",
+          "5752175.100000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "aversa ninsoare",
+        "zapada": "70 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "816.1 mb, in scadere",
+        "icon": "42",
+        "nume": "LACAUTI",
+        "tempe": "-1.0",
+        "vant": "7.7 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2441602.330000",
+          "5730258.200000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 84,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1004.9 mb, variabila",
+        "icon": "11",
+        "nume": "LUGOJ",
+        "tempe": "7.2",
+        "vant": "1.7 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3236431.110000",
+          "5635255.040000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "995.4 mb, in scadere",
+        "icon": "11",
+        "nume": "MAHMUDIA",
+        "tempe": "6.6",
+        "vant": "5.2 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3182335.770000",
+          "5437030.730000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1015.0 mb, in scadere",
+        "icon": "11",
+        "nume": "MANGALIA",
+        "tempe": "8.9",
+        "vant": "0.7 m/s, directia : E",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3144926.960000",
+          "5503154.640000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 83,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1007.1 mb, in scadere",
+        "icon": "11",
+        "nume": "MEDGIDIA",
+        "tempe": "10.2",
+        "vant": "1.6 m/s, directia : E",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2868992.450000",
+          "5840051.940000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "937.1 mb, in scadere",
+        "icon": "18",
+        "nume": "MIERCUREA CIUC",
+        "tempe": "1.4",
+        "vant": "1.0 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2408203.460000",
+          "5577931.510000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1009.9 mb, in crestere",
+        "icon": "11",
+        "nume": "MOLDOVA VECHE",
+        "tempe": "6.3",
+        "vant": "1.2 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3054842.570000",
+          "5915684.780000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 89,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "999.4 mb, in scadere",
+        "icon": "11",
+        "nume": "NEGRESTI (VASLUI)",
+        "tempe": "5.5",
+        "vant": "1.6 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2630572.740000",
+          "5690337.660000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 83,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "862.9 mb, variabila",
+        "icon": "84",
+        "nume": "OBARSIA LOTRULUI",
+        "tempe": "1.2",
+        "vant": "2.3 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2665039.400000",
+          "6069842.620000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 86,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "956.6 mb, variabila",
+        "icon": "5",
+        "nume": "OCNA SUGATAG",
+        "tempe": "3.7",
+        "vant": "1.6 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2815464.270000",
+          "5828033.430000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "953.8 mb, variabila",
+        "icon": "18",
+        "nume": "ODORHEIUL SECUIESC",
+        "tempe": "5.0",
+        "vant": "1.7 m/s, directia : SSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2965229.170000",
+          "5477008.430000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 60,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer senin",
+        "presiunetext": "1013.4 mb, in scadere",
+        "icon": "2",
+        "nume": "OLTENITA",
+        "tempe": "12.9",
+        "vant": "3.1 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2437443.830000",
+          "5947902.820000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1002.9 mb, variabila",
+        "icon": "11",
+        "nume": "ORADEA",
+        "tempe": "4.9",
+        "vant": "2.3 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2416800.020000",
+          "5627618.020000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ceata",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "982.3 mb, in crestere",
+        "icon": "29",
+        "nume": "ORAVITA",
+        "tempe": "4.9",
+        "vant": "1.3 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2544708.100000",
+          "5621018.610000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 47,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "984.1 mb, in scadere",
+        "icon": "84",
+        "nume": "PADES (APA NEAGRA)",
+        "tempe": "11.8",
+        "vant": "2.0 m/s, directia : E",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2664146.330000",
+          "5725571.190000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "indisponibil",
+        "zapada": "36 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "850.9 mb, variabila",
+        "icon": "5",
+        "nume": "PALTINIS",
+        "tempe": "1.0",
+        "vant": "0.7 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2611896.150000",
+          "5682712.190000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ceata",
+        "zapada": "9 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "841.8 mb, variabila",
+        "icon": "29",
+        "nume": "PARANG",
+        "tempe": "-0.8",
+        "vant": "1.5 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2935437.370000",
+          "5672775.850000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 52,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "979.6 mb, variabila",
+        "icon": "5",
+        "nume": "PATARLAGELE",
+        "tempe": "12.4",
+        "vant": "1.5 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2939926.860000",
+          "5716901.840000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "ceata",
+        "zapada": "22 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "831.6 mb, in scadere",
+        "icon": "29",
+        "nume": "PENTELEU",
+        "tempe": "0.1",
+        "vant": "2.8 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2602281.640000",
+          "5685712.130000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "945.7 mb, variabila",
+        "icon": "3",
+        "nume": "PETROSANI",
+        "tempe": "5.8",
+        "vant": "0.7 m/s, directia : SSE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2937665.290000",
+          "5931252.800000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "971.8 mb, in scadere",
+        "icon": "18",
+        "nume": "PIATRA NEAMT",
+        "tempe": "5.9",
+        "vant": "1.4 m/s, directia : ENE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2768067.290000",
+          "5597769.800000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 81,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "976.7 mb, stationara",
+        "icon": "18",
+        "nume": "PITESTI",
+        "tempe": "9.2",
+        "vant": "1.4 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2882903.610000",
+          "5609957.690000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 65,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "992.9 mb, in scadere",
+        "icon": "84",
+        "nume": "PLOIESTI",
+        "tempe": "11.6",
+        "vant": "1.9 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2797952.830000",
+          "5995226.710000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 98,
+        "fenomen_e": "ninsoare",
+        "zapada": "4 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "907.6 mb, variabila",
+        "icon": "42",
+        "nume": "POIANA STAMPEI",
+        "tempe": "0.3",
+        "vant": "1.1 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2650360.790000",
+          "5647605.530000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 89,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "952.3 mb, in scadere",
+        "icon": "3",
+        "nume": "POLOVRAGI",
+        "tempe": "6.0",
+        "vant": "0.6 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2847940.590000",
+          "5701579.760000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "20 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "889.8 mb, variabila",
+        "icon": "48",
+        "nume": "PREDEAL",
+        "tempe": "2.3",
+        "vant": "0.7 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2882109.900000",
+          "6079919.360000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "969.5 mb, variabila",
+        "icon": "48",
+        "nume": "RADAUTI",
+        "tempe": "3.0",
+        "vant": "2.3 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3009912.280000",
+          "5683230.050000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 86,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "996.4 mb, in scadere",
+        "icon": "11",
+        "nume": "RAMNICU SARAT",
+        "tempe": "6.3",
+        "vant": "2.4 m/s, directia : ENE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2712054.480000",
+          "5635514.910000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 76,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "986.7 mb, in scadere",
+        "icon": "5",
+        "nume": "RAMNICU VALCEA",
+        "tempe": "9.5",
+        "vant": "1.1 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2436448.630000",
+          "5671148.570000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "985.4 mb, variabila",
+        "icon": "3",
+        "nume": "RESITA",
+        "tempe": "6.6",
+        "vant": "3.5 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2995808.950000",
+          "5937029.470000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "988.8 mb, variabila",
+        "icon": "11",
+        "nume": "ROMAN",
+        "tempe": "4.6",
+        "vant": "3.7 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2575826.560000",
+          "5831389.470000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "ceata",
+        "zapada": "1 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "879.4 mb, variabila",
+        "icon": "29",
+        "nume": "ROSIA MONTANA",
+        "tempe": "-0.5",
+        "vant": "4.5 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2780618.380000",
+          "5482048.990000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 73,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1003.6 mb, variabila",
+        "icon": "5",
+        "nume": "ROSIORII DE VEDE",
+        "tempe": "11.3",
+        "vant": "4.5 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2459549.970000",
+          "5998429.380000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "vizibilitate redusa din cauza fumului",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1003.8 mb, variabila",
+        "icon": "13",
+        "nume": "SACUIENI",
+        "tempe": "3.8",
+        "vant": "3.5 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2293356.410000",
+          "5791779.720000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 77,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer senin",
+        "presiunetext": "1009.4 mb, variabila",
+        "icon": "2",
+        "nume": "SANNICOLAU MARE",
+        "tempe": "8.7",
+        "vant": "3.5 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2689456.150000",
+          "5900963.180000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 97,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "969.7 mb, variabila",
+        "icon": "18",
+        "nume": "SARMASU",
+        "tempe": "3.6",
+        "vant": "1.9 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2547786.030000",
+          "6060641.510000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 97,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1003.5 mb, variabila",
+        "icon": "11",
+        "nume": "SATU MARE",
+        "tempe": "4.1",
+        "vant": "5.1 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2620625.240000",
+          "5774603.480000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "985.0 mb, in crestere",
+        "icon": "3",
+        "nume": "SEBES (ALBA)",
+        "tempe": "6.7",
+        "vant": "7.2 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2455240.910000",
+          "5650123.630000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "indisponibil",
+        "zapada": "40 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer senin",
+        "presiunetext": "855.7 mb, in crestere",
+        "icon": "2",
+        "nume": "SEMENIC",
+        "tempe": "-1.6",
+        "vant": "2.3 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3294952.600000",
+          "5605421.380000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "ceata",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1016.3 mb, in scadere",
+        "icon": "29",
+        "nume": "SFANTU GHEORGHE (DELTA)",
+        "tempe": "6.6",
+        "vant": "1.0 m/s, directia : SE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2872276.610000",
+          "5759788.760000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 92,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "954.0 mb, variabila",
+        "icon": "18",
+        "nume": "SFANTU GHEORGHE (MUNTE)",
+        "tempe": "3.1",
+        "vant": "1.5 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2681843.400000",
+          "5746648.410000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "962.6 mb, variabila",
+        "icon": "5",
+        "nume": "SIBIU",
+        "tempe": "5.4",
+        "vant": "3.9 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2661018.130000",
+          "6096759.830000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "984.1 mb, in crestere",
+        "icon": "48",
+        "nume": "SIGHETUL MARMATIEI",
+        "tempe": "4.6",
+        "vant": "0.7 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2840223.880000",
+          "5677577.690000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 96,
+        "fenomen_e": "ploaie",
+        "zapada": "4 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "844.2 mb, in scadere",
+        "icon": "18",
+        "nume": "SINAIA 1500",
+        "tempe": "1.3",
+        "vant": "0.5 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2411490.570000",
+          "5822893.570000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ceata",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "962.7 mb, variabila",
+        "icon": "29",
+        "nume": "SIRIA",
+        "tempe": "2.3",
+        "vant": "3.6 m/s, directia : SSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2711131.960000",
+          "5534126.860000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 93,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "995.1 mb, variabila",
+        "icon": "18",
+        "nume": "SLATINA",
+        "tempe": "8.8",
+        "vant": "1.8 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3048320.610000",
+          "5551384.570000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 72,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1009.0 mb, variabila",
+        "icon": "3",
+        "nume": "SLOBOZIA",
+        "tempe": "11.0",
+        "vant": "1.9 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2518423.490000",
+          "5891589.300000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "indisponibil",
+        "zapada": "31 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "889.0 mb, variabila",
+        "icon": "5",
+        "nume": "STANA DE VALE",
+        "tempe": "-0.6",
+        "vant": "0.1 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3030083.230000",
+          "6078989.390000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1003.1 mb, variabila",
+        "icon": "48",
+        "nume": "STEFANESTI STANCA",
+        "tempe": "2.7",
+        "vant": "2.1 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2500958.850000",
+          "5865368.760000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 83,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "984.9 mb, variabila",
+        "icon": "3",
+        "nume": "STEI (PETRU GROZA)",
+        "tempe": "6.2",
+        "vant": "1.0 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2759587.010000",
+          "5552941.250000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 87,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "990.4 mb, in scadere",
+        "icon": "18",
+        "nume": "STOLNICI",
+        "tempe": "8.7",
+        "vant": "1.6 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2921082.930000",
+          "6045995.030000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 92,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "972.1 mb, variabila",
+        "icon": "18",
+        "nume": "SUCEAVA",
+        "tempe": "3.0",
+        "vant": "2.2 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3312749.660000",
+          "5644923.480000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 100,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1014.7 mb, in scadere",
+        "icon": "11",
+        "nume": "SULINA",
+        "tempe": "5.8",
+        "vant": "1.9 m/s, directia : SE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2536256.850000",
+          "6016672.650000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 90,
+        "fenomen_e": "vizibilitate redusa din cauza fumului",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "999.5 mb, variabila",
+        "icon": "13",
+        "nume": "SUPURU DE JOS",
+        "tempe": "4.3",
+        "vant": "5.4 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2508330.800000",
+          "5665868.690000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 86,
+        "fenomen_e": "transport de zapada",
+        "zapada": "20 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "777.0 mb, variabila",
+        "icon": "33",
+        "nume": "TARCU",
+        "tempe": "-8.2",
+        "vant": "15.9 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2830444.630000",
+          "5610425.120000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 71,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "979.2 mb, in scadere",
+        "icon": "18",
+        "nume": "TARGOVISTE",
+        "tempe": "10.6",
+        "vant": "2.1 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2589216.850000",
+          "5627920.610000"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 72,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer senin",
+        "presiunetext": "991.3 mb, in scadere",
+        "icon": "11",
+        "nume": "TARGU JIU",
+        "tempe": "9.6",
+        "vant": "0.2 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2657442.250000",
+          "6014127.430000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 98,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "974.1 mb, in crestere",
+        "icon": "5",
+        "nume": "TARGU LAPUS",
+        "tempe": "1.8",
+        "vant": "0.7 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2639239.470000",
+          "5602350.800000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 87,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "983.8 mb, in scadere",
+        "icon": "84",
+        "nume": "TARGU LOGRESTI",
+        "tempe": "8.7",
+        "vant": "0.5 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2731086.770000",
+          "5866224.720000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 95,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "980.5 mb, variabila",
+        "icon": "18",
+        "nume": "TARGU MURES",
+        "tempe": "4.8",
+        "vant": "0.9 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2936515.760000",
+          "5976766.360000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "burnita",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "969.2 mb, variabila",
+        "icon": "17",
+        "nume": "TARGU NEAMT",
+        "tempe": "4.9",
+        "vant": "2.0 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2965664.810000",
+          "5824156.980000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 85,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "985.5 mb, in scadere",
+        "icon": "11",
+        "nume": "TARGU OCNA",
+        "tempe": "7.3",
+        "vant": "0.4 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2907114.550000",
+          "5779209.970000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 87,
+        "fenomen_e": "aversa ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "948.4 mb, variabila",
+        "icon": "48",
+        "nume": "TARGU SECUIESC",
+        "tempe": "4.1",
+        "vant": "1.9 m/s, directia : SSE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2696822.140000",
+          "5838239.130000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 99,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "954.5 mb, variabila",
+        "icon": "18",
+        "nume": "TARNAVENI (BOBOHALMA)",
+        "tempe": "3.4",
+        "vant": "3.9 m/s, directia : N",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2529867.620000",
+          "5807548.680000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 89,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "986.3 mb, variabila",
+        "icon": "84",
+        "nume": "TEBEA",
+        "tempe": "5.2",
+        "vant": "2.0 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3051154.210000",
+          "5754995.160000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1008.0 mb, in scadere",
+        "icon": "11",
+        "nume": "TECUCI",
+        "tempe": "5.9",
+        "vant": "1.0 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2366438.340000",
+          "5743736.020000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 76,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer senin",
+        "presiunetext": "1009.0 mb, variabila",
+        "icon": "2",
+        "nume": "TIMISOARA",
+        "tempe": "8.0",
+        "vant": "2.0 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2847461.160000",
+          "5567035.400000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 67,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "996.4 mb, in scadere",
+        "icon": "3",
+        "nume": "TITU",
+        "tempe": "11.4",
+        "vant": "2.3 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2823050.030000",
+          "5930065.190000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 98,
+        "fenomen_e": "ploaie",
+        "zapada": "discontinuu ",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "935.0 mb, variabila",
+        "icon": "18",
+        "nume": "TOPLITA",
+        "tempe": "1.7",
+        "vant": "0.5 m/s, directia : ENE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3208686.460000",
+          "5651561.390000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 93,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1015.7 mb, in scadere",
+        "icon": "11",
+        "nume": "TULCEA",
+        "tempe": "6.9",
+        "vant": "2.0 m/s, directia : ENE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2648429.000000",
+          "5874278.640000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 95,
+        "fenomen_e": "ploaie",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "966.1 mb, in crestere",
+        "icon": "18",
+        "nume": "TURDA",
+        "tempe": "3.6",
+        "vant": "1.3 m/s, directia : NNE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2769456.460000",
+          "5428399.950000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 65,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "1012.6 mb, variabila",
+        "icon": "5",
+        "nume": "TURNU MAGURELE",
+        "tempe": "12.5",
+        "vant": "1.1 m/s, directia : NNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2967463.640000",
+          "5577819.700000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 60,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1007.5 mb, in scadere",
+        "icon": "3",
+        "nume": "URZICENI",
+        "tempe": "12.9",
+        "vant": "1.9 m/s, directia : S",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2465833.050000",
+          "5783426.950000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 89,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1001.6 mb, variabila",
+        "icon": "84",
+        "nume": "VARADIA DE MURES",
+        "tempe": "6.3",
+        "vant": "2.1 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2833823.700000",
+          "5691976.540000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 97,
+        "fenomen_e": "ninsoare",
+        "zapada": "78 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "745.3 mb, in scadere",
+        "icon": "42",
+        "nume": "VARFUL OMU",
+        "tempe": "-3.7",
+        "vant": "5.3 m/s, directia : SV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3085154.680000",
+          "5884498.970000"
+        ],
+        "zoom": 1
+      },
+      "properties": {
+        "umezeala": 88,
+        "fenomen_e": "aer cetos",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer partial noros",
+        "presiunetext": "1001.4 mb, in scadere",
+        "icon": "11",
+        "nume": "VASLUI",
+        "tempe": "4.9",
+        "vant": "1.7 m/s, directia : SE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2842763.710000",
+          "5509321.370000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 70,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1002.7 mb, in scadere",
+        "icon": "84",
+        "nume": "VIDELE",
+        "tempe": "11.3",
+        "vant": "2.5 m/s, directia : VSV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2537436.840000",
+          "5902864.720000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 94,
+        "fenomen_e": "ceata cu depunere de chiciura",
+        "zapada": "4 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer invizibil",
+        "presiunetext": "809.9 mb, in crestere",
+        "icon": "34",
+        "nume": "VLADEASA 1800",
+        "tempe": "-5.4",
+        "vant": "14.9 m/s, directia : VNV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2667993.710000",
+          "5686489.180000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 81,
+        "fenomen_e": "indisponibil",
+        "zapada": "7 cm la ora 14",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "947.6 mb, stationara",
+        "icon": "84",
+        "nume": "VOINEASA",
+        "tempe": "6.2",
+        "vant": "1.5 m/s, directia : ESE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2565551.050000",
+          "5973939.710000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 91,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "cer acoperit",
+        "presiunetext": "982.6 mb, variabila",
+        "icon": "5",
+        "nume": "ZALAU",
+        "tempe": "4.5",
+        "vant": "2.4 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2822348.930000",
+          "5413210.120000"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 65,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1011.6 mb, in scadere",
+        "icon": "84",
+        "nume": "ZIMNICEA",
+        "tempe": "12.5",
+        "vant": "1.1 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3189187.639",
+          "5499510.665"
+        ],
+        "zoom": 2
+      },
+      "properties": {
+        "umezeala": 84,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1015.3 mb, in scadere",
+        "icon": "84",
+        "nume": "CONSTANTA - dig",
+        "tempe": "8.1",
+        "vant": "1.3 m/s, directia : SE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2665885.399",
+          "5661799.712"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 78,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "839.9 mb, in scadere",
+        "icon": "84",
+        "nume": "HOREZU 1550",
+        "tempe": "2.4",
+        "vant": "3.4 m/s, directia : V",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2588209.08",
+          "5670281.51"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 89,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "829.6 mb, in scadere",
+        "icon": "84",
+        "nume": "STRAJA",
+        "tempe": "-1.9",
+        "vant": "11.2 m/s, directia : NE",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "2636973.20",
+          "5667555.90"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 79,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "836.7 mb, in scadere",
+        "icon": "84",
+        "nume": "RANCA",
+        "tempe": "1.6",
+        "vant": "3.7 m/s, directia : NV",
+        "tempapa": "indisponibil"
+      }
+    },
+    {
+      "type": "feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "3159937.774833982",
+          "5458578.853022021"
+        ],
+        "zoom": 0
+      },
+      "properties": {
+        "umezeala": 78,
+        "fenomen_e": "indisponibil",
+        "zapada": "indisponibil",
+        "actualizat": "24-01-2025&nbsp;ora&nbsp;17:00",
+        "nebulozitate": "indisponibil",
+        "presiunetext": "1005.3 mb, in scadere",
+        "icon": "84",
+        "nume": "AMZACEA",
+        "tempe": "10.7",
+        "vant": "1.3 m/s, directia : SE",
+        "tempapa": "indisponibil"
+      }
+    }
+  ]
+}

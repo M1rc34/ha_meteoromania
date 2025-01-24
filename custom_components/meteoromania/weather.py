@@ -78,39 +78,49 @@ class MeteoroManiaWeather(WeatherEntity):
     def update_from_latest_data(self):
         """Parse the data from the coordinator and update internal state."""
         # Update current weather
-        current = self._coordinator.current_data["properties"]
-        self._temperature = float(current.get("tempe", 0))
-        self._condition = CONDITION_MAP.get(current.get("icon", ""), "cloudy")
-        self._humidity = current.get("umezeala", None)
-        self._pressure = float(current.get("presiunetext", "0").split()[0])
-        self._wind_speed = float(current.get("vant", "0").split()[0])
+        if self._coordinator.current_data:
+            current = self._coordinator.current_data["properties"]
+            self._temperature = float(current.get("tempe", 0))
+            self._condition = CONDITION_MAP.get(current.get("icon", ""), "cloudy")
+            self._humidity = current.get("umezeala", None)
+            self._pressure = float(current.get("presiunetext", "0").split()[0])
+            self._wind_speed = float(current.get("vant", "0").split()[0])
+        else:
+            _LOGGER.warning("No current weather data available to update entity")
+            self._temperature = None
+            self._condition = None
+            self._humidity = None
+            self._pressure = None
+            self._wind_speed = None
 
-        # Update forecast, if available
-        forecast_data = self._coordinator.forecast_data.get("prognoza", [])
-        forecasts: list[Forecast] = []
+        # Update forecast
+        if self._coordinator.forecast_data:
+            forecast_data = self._coordinator.forecast_data.get("prognoza", [])
+            forecasts: list[Forecast] = []
+            for day_data in forecast_data:
+                attributes = day_data.get("@attributes", {})
+                date = attributes.get("data")
+                if not date:
+                    continue
 
-        for day_data in forecast_data:
-            attributes = day_data.get("@attributes", {})
-            date = attributes.get("data")
-            if not date:
-                continue
+                temp_min = float(day_data.get("temp_min", 0))
+                temp_max = float(day_data.get("temp_max", 0))
+                fenomen_code = day_data.get("fenomen_simbol", "")
+                cond = CONDITION_MAP.get(fenomen_code, "cloudy")
 
-            temp_min = float(day_data.get("temp_min", 0))
-            temp_max = float(day_data.get("temp_max", 0))
-            fenomen_code = day_data.get("fenomen_simbol", "")
-            cond = CONDITION_MAP.get(fenomen_code, "cloudy")
+                forecasts.append(
+                    {
+                        "datetime": f"{date}T00:00:00",
+                        "condition": cond,
+                        "native_temperature": temp_max,
+                        "native_templow": temp_min,
+                    }
+                )
 
-            forecasts.append(
-                {
-                    "datetime": f"{date}T00:00:00",
-                    "condition": cond,
-                    "native_temperature": temp_max,
-                    "native_templow": temp_min,
-                }
-            )
-
-        self._forecast = forecasts if forecasts else None
-        _LOGGER.debug("Built forecast data: %s", self._forecast)
+            self._forecast = forecasts
+        else:
+            _LOGGER.warning("No forecast data available to update entity")
+            self._forecast = None
 
     def _update_weather_and_notify(self):
         """Update weather and notify listeners."""

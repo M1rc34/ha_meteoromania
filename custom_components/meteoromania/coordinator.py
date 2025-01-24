@@ -10,7 +10,7 @@ _LOGGER = logging.getLogger(__name__)
 
 class MeteoroManiaCoordinator(DataUpdateCoordinator):
     """Class to manage fetching data from the MeteoroMania API."""
-
+    
     def __init__(self, hass, city):
         """Initialize the coordinator."""
         self.city = city
@@ -24,6 +24,11 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
             update_interval=timedelta(minutes=30),
         )
 
+    # Normalize city names for comparison
+    def normalize_city_name(city_name: str) -> str:
+        """Normalize city names to lowercase for consistent comparison."""
+        return city_name.strip().lower()
+
     async def _async_update_data(self):
         """Fetch data from the MeteoroMania API."""
         async with aiohttp.ClientSession() as session:
@@ -33,7 +38,7 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
                     if response.status != 200:
                         raise UpdateFailed(f"Error fetching forecast: {response.status}")
                     forecast_data = await response.json()
-                
+
                 # Fetch current weather data
                 async with session.get(API_URL_CURRENT) as response:
                     if response.status != 200:
@@ -41,19 +46,28 @@ class MeteoroManiaCoordinator(DataUpdateCoordinator):
                     current_data = await response.json()
 
                 # Find relevant data for the city
+                normalized_city = self.normalize_city_name(self.city)
                 forecast_city = next(
-                    (city for city in forecast_data["tara"]["localitate"] if city["@attributes"]["nume"].lower() == self.city.lower()), 
-                    None
+                    (
+                        city
+                        for city in forecast_data["tara"]["localitate"]
+                        if self.normalize_city_name(city["@attributes"]["nume"]) == normalized_city
+                    ),
+                    None,
                 )
                 current_city = next(
-                    (feature for feature in current_data["features"] if feature["properties"]["nume"].lower() == self.city.lower()),
-                    None
+                    (
+                        feature
+                        for feature in current_data["features"]
+                        if self.normalize_city_name(feature["properties"]["nume"]) == normalized_city
+                    ),
+                    None,
                 )
 
                 if not forecast_city:
-                    raise UpdateFailed(f"City {self.city} not found in forecast data")
+                    _LOGGER.warning(f"No forecast data available for city: {self.city}")
                 if not current_city:
-                    raise UpdateFailed(f"City {self.city} not found in current weather data")
+                    _LOGGER.warning(f"No current weather data available for city: {self.city}")
 
                 self.forecast_data = forecast_city
                 self.current_data = current_city

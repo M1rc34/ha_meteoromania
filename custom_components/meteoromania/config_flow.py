@@ -13,6 +13,10 @@ from .const import DOMAIN, API_URL_CURRENT
 
 _LOGGER = logging.getLogger(__name__)
 
+# Normalize city names for comparison
+def normalize_city_name(city_name: str) -> str:
+    """Normalize city names to lowercase for consistent comparison."""
+    return city_name.strip().lower()
 
 async def fetch_available_cities(hass: HomeAssistant) -> list[str]:
     """Fetch the list of all available cities from the current weather API."""
@@ -24,15 +28,16 @@ async def fetch_available_cities(hass: HomeAssistant) -> list[str]:
                     return []
                 data = await resp.json()
         
-        # Extract city names from the current weather API
-        return [feature["properties"]["nume"] for feature in data.get("features", [])]
+        # Extract and normalize city names from the current weather API
+        return sorted(
+            {normalize_city_name(feature["properties"]["nume"]).title() for feature in data.get("features", [])}
+        )
     except asyncio.TimeoutError:
         _LOGGER.warning("Timeout while fetching city list from the current weather API.")
         return []
     except Exception as ex:
         _LOGGER.warning("Error fetching city list from the current weather API: %s", ex)
         return []
-
 
 class MeteoroManiaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for MeteoroMania."""
