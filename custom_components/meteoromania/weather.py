@@ -9,7 +9,7 @@ from homeassistant.components.weather import (
     WeatherEntityFeature,
     Forecast,
 )
-# Instead of TEMP_CELSIUS, we import UnitOfTemperature:
+# Use UnitOfTemperature, not TEMP_CELSIUS
 from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
 
@@ -31,7 +31,6 @@ class MeteoroManiaWeather(WeatherEntity):
     _attr_has_entity_name = True
     _attr_attribution = "Data provided by meteoromania.ro"
     _attr_supported_features = WeatherEntityFeature.FORECAST_DAILY
-    # Use UnitOfTemperature instead of TEMP_CELSIUS
     _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
 
     def __init__(self, coordinator: MeteoroManiaCoordinator, city: str):
@@ -119,17 +118,17 @@ class MeteoroManiaWeather(WeatherEntity):
         self._forecast = forecasts
 
     async def async_update(self):
-        """Update the entity by asking the coordinator for new data."""
+        """Request coordinator refresh."""
         await self._coordinator.async_request_refresh()
 
     def async_write_ha_state(self):
-        """Call when coordinator data is updated."""
+        """Called when coordinator data is updated."""
         self.update_from_latest_data()
         super().async_write_ha_state()
 
     @property
     def extra_state_attributes(self):
-        """Add any additional attributes you want."""
+        """Extra attributes."""
         data = self._coordinator.data
         return {
             "DataPrognozei": data.get("DataPrognozei"),
