@@ -4,8 +4,8 @@ DOMAIN = "meteoromania"
 
 PLATFORMS = ["weather"]
 
-API_URL_FORECAST = "https://meteoromania.ro/wp-json/meteoapi/v2/prognoza-orase"
-API_URL_CURRENT = "https://meteoromania.ro/wp-json/meteoapi/v2/starea-vremii"
+API_URL_FORECAST = "https://www.meteoromania.ro/wp-json/meteoapi/v2/prognoza-orase"
+API_URL_CURRENT = "https://www.meteoromania.ro/wp-json/meteoapi/v2/starea-vremii"
 
 CONDITION_MAP = {
     "001": "sunny",            # Clear sky
